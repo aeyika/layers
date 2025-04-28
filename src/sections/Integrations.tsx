@@ -25,7 +25,7 @@ export default function Integrations() {
                 <div className="grid lg:grid-cols-2 items-center lg:gap-16">
                 <div>
                 <Tag>Integrations</Tag>
-                <h2 className="text-6xl font-medium mt-6">Pairs well with <span className="text-lime-400 font-serif italic">others</span></h2>
+                <h2 className="text-6xl font-medium mt-6">Pairs well with <span className="text-lime-400">others</span></h2>
                 <p className="text-white/50 mt-4 text-lg">Layers seamlessly connects with your favourite tools, making it easy to plug into any workflow and collaborate across platforms.</p>
                 </div>
                 <div>
