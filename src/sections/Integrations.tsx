@@ -20,7 +20,7 @@ export type IntegrationsType = typeof integrations;
 
 export default function Integrations() {
     return( 
-        <section className="py-24 overflow-hidden">
+        <section className="py-24 overflow-hidden" id="integrations">
             <div className="container">
                 <div className="grid lg:grid-cols-2 items-center lg:gap-16">
                 <div>
