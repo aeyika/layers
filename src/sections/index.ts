@@ -1,0 +1,9 @@
+export { default as CallToAction } from "./CallToAction";
+export { default as Faqs } from "./Faqs";
+export { default as Features } from "./Features";
+export { default as Footer } from "./Footer";
+export { default as Hero } from "./Hero";
+export { default as Integrations } from "./Integrations";
+export { default as Introduction } from "./Introduction";
+export { default as LogoTicker } from "./LogoTicker";
+export { default as Navbar } from "./Navbar";
