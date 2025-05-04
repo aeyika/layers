@@ -9,7 +9,7 @@ import celestialLogo from "@/assets/images/celestial.svg";
 import twiceLogo from "@/assets/images/twice.svg";
 import Image from "next/image";
 import { Fragment } from "react";
-import { motion } from "motion/react";
+import { motion } from "framer-motion"; // Correct import from framer-motion
 
 const logos = [
     { name: "Quantum", image: quantumLogo },
@@ -23,18 +23,28 @@ const logos = [
 ];
 
 export default function LogoTicker() {
+    const duplicatedLogos = [...logos, ...logos];
+
     return (
         <section className="py-24 overflow-x-clip">
             <div className="container">
                 <h3 className="text-center text-white/50 text-xl">Already chosen by these market leaders</h3>
-                <div className="overflow-hidden mt-12 [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
-                    <motion.div className="flex gap-24 pr-24">
-                        {logos.map(logo => (
-                            Array.from({ length: 2 }).map((_, i) => (
-                                <Fragment key={`${logo.name}-${i}`}>
-                                    <Image src={logo.image} alt={logo.name} />
-                                </Fragment>
-                            ))
+                <div className="flex overflow-hidden mt-12 [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
+                    <motion.div
+                        animate={{
+                            x: "-50%",
+                        }}
+                        transition={{
+                            duration: 30,
+                            ease: "linear",
+                            repeat: Infinity,
+                        }}
+                        className="flex flex-none gap-24 pr-24"
+                    >
+                        {duplicatedLogos.map((logo, index) => (
+                            <Fragment key={index}>
+                                <Image src={logo.image} alt={logo.name} />
+                            </Fragment>
                         ))}
                     </motion.div>
                 </div>
