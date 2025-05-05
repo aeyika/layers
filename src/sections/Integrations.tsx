@@ -1,3 +1,4 @@
+
 import Tag from "@/components/Tag";
 import figmaIcon from '@assets/images/figma-logo.svg';
 import notionIcon from '@assets/images/notion-logo.svg';
@@ -31,7 +32,7 @@ export default function Integrations() {
                 <div>
                 <div className="h-[400px] lg:h-[800px] overflow-hidden [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_90%,transparent)] grid md:grid-cols-2 gap-4">
                     <IntegrationColumn integrations={integrations} />
-                    <IntegrationColumn integrations={integrations.slice().reverse()} className="hidden md:flex"/>
+                    <IntegrationColumn reverse integrations={integrations.slice().reverse()} className="hidden md:flex"/>
                 </div>    
                 </div>
                 </div>
